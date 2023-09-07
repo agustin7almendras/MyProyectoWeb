@@ -1,0 +1,21 @@
+http://localhost/miProyectoWeb/index.php/estudiante/indexlte
+  usaurio :jaime 
+   paswor: bolivia123
+ALMENDRAS CRUZ AGUSTIN
+
+ADMINISTRADOR
+agustin
+agustin123
+
+INVIATDO
+pancho
+pancho123
+
+MODDIFICADO CON BASE DATOS de proyecto de seguridad
+agus7
+agustin1234
+invitado
+sacarias 
+sacarias123
+
+
