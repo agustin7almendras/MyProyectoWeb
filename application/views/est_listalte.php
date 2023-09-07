@@ -8,17 +8,18 @@
             <h1>TABLA DE CONDUCTORES</h1>
           </div>
           <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-              <li class="breadcrumb-item active">DataTables</li>
+                 <ol class="breadcrumb float-sm-right">
+                   <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <!--  <li class="breadcrumb-item active">DataTables</li>-->
+                 </ol>
                  <a href="<?php echo base_url(); ?>index.php/usuarios/logout">
                   <button type="button" class="btn btn-danger">Cerrar cesion</button>
                  </a>
-            </ol>
 
           </div>
-
+           
         </div>
+        
       </div><!-- /.container-fluid -->
     </section>
 
@@ -34,7 +35,7 @@
               <div class="card-header">                
 
     
-                <h1>USUARIO numero UNO</h1>
+                <h1>PRIMER USUARIO ADMINISTRADOR</h1>
               <br>
              <!-- PARA QUE CARGUE EL NOMBRE DEL USUARIO-->
               <h3>

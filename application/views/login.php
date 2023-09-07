@@ -20,7 +20,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
 <div class="login-logo">
-    <h2>SISTEMA DE ALERTA PARA CONDUCTORES DE TAXIS</h2>
+    <h2>SISTEMA DE PAGOS PARA CONDUCTORES DE TAXIS</h2>
     <a href="../../index2.html"><b>-----</b>
     </a>
     
