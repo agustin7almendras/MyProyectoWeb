@@ -37,7 +37,7 @@
 
 			
 			//envia datos hasta agregarbd
-			echo form_open_multipart('estudiante/modificarbdlte');
+			echo form_open_multipart('conductor/modificarbdlte');
 			?>
                 <div class="card-body">
 					

@@ -33,7 +33,7 @@
               
 			  <?php 
 			//envia datos hasta agregarbd
-			echo form_open_multipart('estudiante/agregarbdlte');
+			echo form_open_multipart('conductor/agregarbdlte');
 			?>
                 <div class="card-body">
                   <div class="form-group">

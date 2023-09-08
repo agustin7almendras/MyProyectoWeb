@@ -46,7 +46,7 @@
              
               <hr>
               <!--BOTON DE  REPORTES DE PDF EDITABLE -->
-              <a href="<?php echo base_url(); ?>index.php/estudiante/agregarlte">
+              <a href="<?php echo base_url(); ?>index.php/conductor/agregarlte">
                 <button type="button" class="btn btn-outline-success">Agregar Conductores Nuevos</button>
               </a>
               
@@ -88,7 +88,7 @@
                     <td>
 								        <?php //formulario modificar
 								        //envia datos hasta agregarbd
-								        echo form_open_multipart('estudiante/modificarlte');
+								        echo form_open_multipart('conductor/modificarlte');
 								        ?>
 								        	<!-- -->
 								        	<input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">
@@ -102,7 +102,7 @@
                     <td>
 								        <?php 
 								        //envia datos hasta agregarbd
-								        echo form_open_multipart('estudiante/eliminarbdlte');
+								        echo form_open_multipart('conductor/eliminarbdlte');
 								        ?>
 								        	<!-- ocultamos el id en type -- hidden -->
 								        	<input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">
@@ -118,7 +118,7 @@
                     <td>
 								        <?php 
 								        	//envia datos hasta agregarbd
-								        	echo form_open_multipart('estudiante/deshabilitarbdlte');
+								        	echo form_open_multipart('conductor/deshabilitarbdlte');
 								        ?>
 								        	<!-- ocultamos el id en type -- hidden -->
 								        <input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">
@@ -150,7 +150,7 @@
 
                         <?php 
 								        	//envia datos hasta agregarbd
-								        	echo form_open_multipart('estudiante/subirfoto');
+								        	echo form_open_multipart('conductor/subirfoto');
 								        ?>
 								        	<!-- ocultamos el id en type -- hidden -->
 								        	<!--<input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">
@@ -186,16 +186,16 @@
               </div>
 
               
-                <a href="<?php echo base_url(); ?>index.php/estudiante/agregarlte">
+                <a href="<?php echo base_url(); ?>index.php/conductor/agregarlte">
                 <button type="button" class="btn btn-success">Crear Conductores Nuevos</button>
                 </a>
 
-                <a href="<?php echo base_url(); ?>index.php/estudiante/deshabilitadoslte">
+                <a href="<?php echo base_url(); ?>index.php/conductor/deshabilitadoslte">
                 <button type="button" class="btn btn-warning">Ver lista deshabilitados</button>
                 </a>
 
                 
-                <a href="<?php echo base_url();?>index.php/estudiante/listapdf" target="_blank"> <!--_blank es para abrir este enlace en una pagina nueva-->
+                <a href="<?php echo base_url();?>index.php/conductor/listapdf" target="_blank"> <!--_blank es para abrir este enlace en una pagina nueva-->
                
                 <button type="submit" class="btn btn-primary">Editar reportes en PDF</button>
               </a>

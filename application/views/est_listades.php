@@ -3,7 +3,7 @@
 	<div class="row">
 		<div class="col-md-12">
 
-			<a href="<?php echo base_url(); ?>index.php/estudiante/index">
+			<a href="<?php echo base_url(); ?>index.php/conductor/index">
 				<button type="button" class="btn btn-warning">Ver lista habilitados</button>
 			</a>
 
@@ -34,7 +34,7 @@
 							<td>
 								<?php 
 									//envia datos hasta agregarbd
-									echo form_open_multipart('estudiante/habilitarbd');
+									echo form_open_multipart('conductor/habilitarbd');
 								?>
 									<!-- ocultamos el id en type -- hidden -->
 									<input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">

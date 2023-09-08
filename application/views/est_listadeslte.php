@@ -25,7 +25,7 @@
             <div class="card">
               <div class="card-header">
 
-			          <a href="<?php echo base_url(); ?>index.php/estudiante/indexlte">
+			          <a href="<?php echo base_url(); ?>index.php/conductor/indexlte">
 				        <button type="button" class="btn btn-warning">Ver lista habilitados</button>
 			          </a>
               </div>
@@ -60,7 +60,7 @@
                     <td>
 								        <?php 
 								        	//envia datos hasta agregarbd
-								        	echo form_open_multipart('estudiante/habilitarbdlte');
+								        	echo form_open_multipart('comductor/habilitarbdlte');
 								        ?>
 								        	<!-- ocultamos el id en type -- hidden -->
 								        	<input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">

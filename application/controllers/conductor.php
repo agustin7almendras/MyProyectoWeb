@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); // ESTO ES UNA L
 
 
 //TENEMOS LA ARQUITECTURA DE UNA MODELO DE CLASE EN PHP
-class Estudiante extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO CONTROLADOR Welcome.php
+class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO CONTROLADOR Welcome.php
 
 
 	public function indexlte() // CARGA DE indexlte
@@ -153,7 +153,7 @@ class Estudiante extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTR
 		}
 		else
 		{
-			redirect('estudiante/index','refresh');
+			redirect('conductor/index','refresh');
 		}
 	}
 
@@ -188,12 +188,12 @@ class Estudiante extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTR
 				$this->estudiante_model->modificarestudiante($idestudiante,$data);
 				$this->upload->data();
 			}
-			redirect('estudiante/indexlte','refresh');
+			redirect('conductor/indexlte','refresh');
 
 		}
 		else
 		{
-			redirect('estudiante/index','refresh');
+			redirect('conductor/index','refresh');
 		}
 	}
 
@@ -236,7 +236,7 @@ class Estudiante extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTR
 
 		$this->estudiante_model->agregarestudiantelte($data);
 
-		redirect('estudiante/indexlte','refresh');
+		redirect('conductor/indexlte','refresh');
 	}
 
 	public function eliminarbdlte()
@@ -244,7 +244,7 @@ class Estudiante extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTR
 		//
 		$idestudiante=$_POST['idestudiante'];
 		$this->estudiante_model->eliminarestudiantelte($idestudiante);
-		redirect('estudiante/indexlte','refresh');
+		redirect('conductor/indexlte','refresh');
 	}
 
 	public function modificarlte()
@@ -270,7 +270,7 @@ class Estudiante extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTR
 		$data['nota']=$_POST['nota'];
 
 		$this->estudiante_model->modificarestudiantelte($idestudiante,$data);
-		redirect('estudiante/indexlte','refresh');
+		redirect('conductor/indexlte','refresh');
 	}
 	public function deshabilitarbdlte()
 	{
@@ -278,7 +278,7 @@ class Estudiante extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTR
 		$data['habilitado']='0';
 
 		$this->estudiante_model->modificarestudiantelte($idestudiante,$data);
-		redirect('estudiante/indexlte','refresh');
+		redirect('conductor/indexlte','refresh');
 	}
 
 	
@@ -288,7 +288,7 @@ class Estudiante extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTR
 		$data['habilitado']='1';
 
 		$this->estudiante_model->modificarestudiantelte($idestudiante,$data);
-		redirect('estudiante/deshabilitadoslte','refresh');
+		redirect('conductor/deshabilitadoslte','refresh');
 	}
 
 	public function deshabilitadoslte()//METODO QUE CARGA deshabilitadoslte
