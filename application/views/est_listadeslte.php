@@ -60,7 +60,7 @@
                     <td>
 								        <?php 
 								        	//envia datos hasta agregarbd
-								        	echo form_open_multipart('comductor/habilitarbdlte');
+								        	echo form_open_multipart('conductor/habilitarbdlte');// hibilita y se actializa ahi nomas
 								        ?>
 								        	<!-- ocultamos el id en type -- hidden -->
 								        	<input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">

@@ -1,4 +1,4 @@
-http://localhost/miProyectoWeb/index.php/estudiante/indexlte
+http://localhost/miProyectoWeb/index.php/conductor/indexlte
   usaurio :jaime 
    paswor: bolivia123
 ALMENDRAS CRUZ AGUSTIN
@@ -12,8 +12,9 @@ pancho
 pancho123
 
 MODDIFICADO CON BASE DATOS de proyecto de seguridad
+ACTUAL
 agus7
-agustin1234
+agustin1234 
 invitado
 sacarias 
 sacarias123

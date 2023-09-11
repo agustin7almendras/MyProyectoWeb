@@ -35,7 +35,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		if ($this->session->userdata('login'))//controlar si existe la variable de session login 
 		{
 			//redirect('estudiante/indexlte','refresh');
-			$lista=$this->estudiante_model->listaestudiantes(); //este pdf recibe de estudiante_model
+			$lista=$this->estudiante_model->listaprincipal(); //este pdf recibe de estudiante_model y trae metodo listaPrincipal
 			$lista=$lista->result();
 			
 			$this->pdf=new Pdf(); //se crea el objeto para poder invocar todos los elementos de la libreria pdf

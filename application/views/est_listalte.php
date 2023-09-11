@@ -23,13 +23,13 @@
       </div><!-- /.container-fluid -->
     </section>
 
-    <!-- Main content -->
+    <!-- Main content -->  <!-- EL CONTENIDO DE LA TABLA  -->
     <section class="content">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row">  <!--CONTIENNE LAS DOS TABLAS-->
           <div class="col-12">
 
-             <!---->
+            
             <div class="card" >
               <!---->
               <div class="card-header">                
@@ -74,7 +74,7 @@
 
             <?php 
 				    $indice=1;
-				    foreach ($guardame->result() as $row) 
+				    foreach ($guardame->result() as $row) //
 				    {
 					  ?>
                   <tr>
@@ -84,13 +84,11 @@
 							      <td><?php echo $row->segundoApellido; ?></td>
 							      <td><?php echo $row->nota; ?></td>
                     <td><?php echo formatearFecha($row->creado); ?></td>
-
-                    <td>
-								        <?php //formulario modificar
-								        //envia datos hasta agregarbd
+                    <td> <?php 
+							 	        
 								        echo form_open_multipart('conductor/modificarlte');
 								        ?>
-								        	<!-- -->
+								        	
 								        	<input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">
 								        	<button type="submit" class="btn btn-success">MODIFICAR</button>
 
@@ -98,7 +96,7 @@
 								        echo form_close();
 								        ?>
 							      </td>
-
+                  <!--...................................................................................................-->
                     <td>
 								        <?php 
 								        //envia datos hasta agregarbd

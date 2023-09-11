@@ -56,11 +56,11 @@ class Usuarios extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO 
 			$tipo=$this->session->userdata('tipo');// se obteiene de otro valor llamado tipo
 			if($tipo=='admin')// si tip es igual a admin
 			{
-				redirect('estudiante/indexlte','refresh'); // se redirecciona a estos paginas 
+				redirect('conductor/indexlte','refresh'); // se redirecciona a estos paginas 
 			}
 			else
 			{
-				redirect('estudiante/invitadolte','refresh');
+				redirect('conductor/invitadolte','refresh');
 			}
 		}
 		else
