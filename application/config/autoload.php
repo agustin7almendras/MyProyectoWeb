@@ -58,8 +58,8 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */ /*AQUI AGREGAMOS LIBRERIAS PARA CARGAR database session,pdfI*/
-$autoload['libraries'] = array('database','session','pdf'); //1 CARGAMOS LIBRERIA SESSION
-
+$autoload['libraries'] = array('database','session','pdf'); //1 er PASO CARGAMOS LIBRERIA SESSION
+/*Ejemplo libreria database */
 /*
 | -------------------------------------------------------------------
 |  Auto-load Drivers
@@ -132,7 +132,7 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('estudiante_model','usuario_model');
+$autoload['model'] = array('conductor_model','usuario_model');
 //CARGA model
 // CARGA estudiante model 
 // usuario_model todala logica de login 

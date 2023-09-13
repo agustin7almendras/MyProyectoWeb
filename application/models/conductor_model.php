@@ -1,6 +1,6 @@
 <?php 
 // este modelo interactua directamente con base de datos 
-   class Estudiante_model extends CI_Model
+   class Conductor_model extends CI_Model
     {
         public function listaprincipal()//MUESTRA TODOS LA LISTA PRINCIPAL
         {

@@ -49,6 +49,9 @@
               <a href="<?php echo base_url(); ?>index.php/conductor/agregarlte">
                 <button type="button" class="btn btn-outline-success">Agregar Conductores Nuevos</button>
               </a>
+              <button type="button" class="btn btn-segundary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ACCIONES
+
+              </button>
               
 
               <!--FIN DIVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->

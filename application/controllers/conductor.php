@@ -15,8 +15,8 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		if ($this->session->userdata('login'))//controlar si existe la variable de session login 
 		{
 			//redirect('estudiante/indexlte','refresh');
-			$lista=$this->estudiante_model->listaprincipal();
-			$data['guardame']=$lista;
+			$lista=$this->conductor_model->listaprincipal();// aqui esta la consulta de BD
+			$data['guardame']=$lista;// ESTAMOS CARGANOD TOD ESE LISTA 
 
 			$this->load->view('inclte/cabecera'); //CARGA LA CABECERA DE LA CARPETA inclte
 			$this->load->view('inclte/menusuperior');
@@ -35,7 +35,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		if ($this->session->userdata('login'))//controlar si existe la variable de session login 
 		{
 			//redirect('estudiante/indexlte','refresh');
-			$lista=$this->estudiante_model->listaprincipal(); //este pdf recibe de estudiante_model y trae metodo listaPrincipal
+			$lista=$this->conductor_model->listaprincipal(); //este pdf recibe de estudiante_model y trae metodo listaPrincipal
 			$lista=$lista->result();
 			
 			$this->pdf=new Pdf(); //se crea el objeto para poder invocar todos los elementos de la libreria pdf
@@ -234,7 +234,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		$data['segundoApellido']=$_POST['apellido2'];
 		$data['nota']=$_POST['nota'];
 
-		$this->estudiante_model->agregarestudiantelte($data);
+		$this->conductor_model->agregarestudiantelte($data);
 
 		redirect('conductor/indexlte','refresh');
 	}
@@ -243,7 +243,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 	{
 		//
 		$idestudiante=$_POST['idestudiante'];
-		$this->estudiante_model->eliminarestudiantelte($idestudiante);
+		$this->conductor_model->eliminarestudiantelte($idestudiante);
 		redirect('conductor/indexlte','refresh');
 	}
 
@@ -251,7 +251,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 	{
 		//recepcion que esta llegando desde el boton modificar
 		$idestudiante=$_POST['idestudiante'];
-		$data['infoestudiante']=$this->estudiante_model->recuperarestudiantelte($idestudiante);
+		$data['infoestudiante']=$this->conductor_model->recuperarestudiantelte($idestudiante);
 
 		$this->load->view('inclte/cabecera');
 		$this->load->view('inclte/menusuperior');
@@ -269,7 +269,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		$data['segundoApellido']=$_POST['apellido2'];
 		$data['nota']=$_POST['nota'];
 
-		$this->estudiante_model->modificarestudiantelte($idestudiante,$data);
+		$this->conductor_model->modificarestudiantelte($idestudiante,$data);
 		redirect('conductor/indexlte','refresh');
 	}
 	public function deshabilitarbdlte()
@@ -277,7 +277,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		$idestudiante=$_POST['idestudiante'];
 		$data['habilitado']='0';
 
-		$this->estudiante_model->modificarestudiantelte($idestudiante,$data);
+		$this->conductor_model->modificarestudiantelte($idestudiante,$data);
 		redirect('conductor/indexlte','refresh');
 	}
 
@@ -287,14 +287,14 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		$idestudiante=$_POST['idestudiante'];
 		$data['habilitado']='1';
 
-		$this->estudiante_model->modificarestudiantelte($idestudiante,$data);
+		$this->conductor_model->modificarestudiantelte($idestudiante,$data);
 		redirect('conductor/deshabilitadoslte','refresh');
 	}
 
 	public function deshabilitadoslte()//METODO QUE CARGA deshabilitadoslte
 	{
 
-		$lista=$this->estudiante_model->listaestudiantesdeslte();
+		$lista=$this->conductor_model->listaestudiantesdeslte();
 		$data['estudiantes']=$lista;
 
 		$this->load->view('inclte/cabecera');
