@@ -47,7 +47,7 @@
 
             <?php 
 				    $indice=1;
-				    foreach ($estudiantes->result() as $row) 
+				    foreach ($conductortbl->result() as $row) // tabla condutortbl
 				    {
 					  ?>
                   <tr>

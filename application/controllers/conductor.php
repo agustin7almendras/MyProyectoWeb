@@ -295,7 +295,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 	{
 
 		$lista=$this->conductor_model->listaestudiantesdeslte();
-		$data['estudiantes']=$lista;
+		$data['conductortbl']=$lista;
 
 		$this->load->view('inclte/cabecera');
 		$this->load->view('inclte/menusuperior');

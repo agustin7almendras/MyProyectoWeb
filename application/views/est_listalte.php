@@ -65,7 +65,7 @@
                     <th>Nombre</th>
                     <th>Apellido P.</th> 
                     <th>Apellido M.</th>
-                    <th>PLACA</th>
+                    <th>LICENCIA</th>
                     <th>Creación</th>
                    <th>Modificar</th>
                     <th>Eliminar</th>
@@ -175,7 +175,7 @@
                     <th>Nombre</th>
                     <th>Apellido P.</th> 
                     <th>Apellido M.</th>
-                    <th>Placa</th>
+                    <th>LICENCIA</th>
                     <th>Creación</th>
                     <th>Modificar</th>
                     <th>Eliminar</th>
