@@ -131,20 +131,20 @@
 							      </td>
                     
 
-                   <!-- SUBIR FOTO COMENTADO 
-                    <td>
+                   <!--campo de susbir foto--------------------------------------------------------->
+                   <!--<td>
                       <?php
                       $foto=$row->foto;
                       if($foto=="")
                       {
                         ?>
-                        <img width="100" src="<?php echo base_url(); ?>uploads/estudiantes/perfil.jpg">
+                        <img width="100" src="<?php echo base_url(); ?>uploads/fotosconductores/perfil.jpg">
                         <?php
                       } 
                       else
                       {
                       ?>
-                        <img width="100" src="<?php echo base_url(); ?>uploads/estudiantes/<?php echo $foto; ?>">          
+                        <img width="100" src="<?php echo base_url(); ?>uploads/fotosconductores/<?php echo $foto; ?>">          
                       <?php 
                       }
                       ?>
@@ -153,15 +153,15 @@
 								        	//envia datos hasta agregarbd
 								        	echo form_open_multipart('conductor/subirfoto');
 								        ?>
-								        	<!-- ocultamos el id en type -- hidden -->
-								        	<!--<input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">
-								        	<button type="submit" class="btn btn-primary">Subir</button> //BOTON FOTO-->
+								        
+								        	<input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">
+								        	<button type="submit" class="btn btn-primary">Subir</button>
 
 								        <?php 
 								        echo form_close();
 								        ?>
-                    </td>
-                     -->  <!--COMENTADO ASTA AQUI-->
+                    </td>-->
+                       <!--fin de subir foto-->
 
                   </tr>
                   <?php

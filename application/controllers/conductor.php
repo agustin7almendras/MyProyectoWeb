@@ -157,18 +157,18 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		}
 	}
 
-	public function subir()
+	/*public function subir()
 	{
 		if ($this->session->userdata('login'))//controlar si existe la variable de session login 
 		{
-			//redirect('estudiante/indexlte','refresh');
+			//redirect('conductor/indexlte','refresh');
 			
 			$idestudiante=$_POST['idEstudiante'];
 			$nombrearchivo=$idestudiante.".jpg";
 			
-			$config['upload_path']='./uploads/estudiantes/';
+			$config['upload_path']='./uploads/fotosconductores/';
 			$config['file_name']=$nombrearchivo;
-			$direccion="./uploads/estudiantes/".$nombrearchivo;
+			$direccion="./uploads/fotosconductores/".$nombrearchivo;
 
 			if (file_exists($direccion)) 
 			{
@@ -185,7 +185,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 			else
 			{
 				$data['foto']=$nombrearchivo;
-				$this->estudiante_model->modificarestudiante($idestudiante,$data);
+				$this->conductor_model->modificarestudiante($idestudiante,$data);
 				$this->upload->data();
 			}
 			redirect('conductor/indexlte','refresh');
@@ -196,6 +196,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 			redirect('conductor/index','refresh');
 		}
 	}
+	*/
 
 	public function invitadolte()
 	{

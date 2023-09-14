@@ -93,7 +93,7 @@ class Usuarios extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO 
 	{
 
 		$lista=$this->estudiante_model->listaestudianteslte();
-		$data['estudiantes']=$lista;
+		$data['conductortbl']=$lista;
 
 		$this->load->view('inclte/cabecera');
 		$this->load->view('inclte/menusuperior');
@@ -257,7 +257,7 @@ class Usuarios extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO 
 	{
 
 		$lista=$this->estudiante_model->listaestudiantesdes();
-		$data['estudiantes']=$lista;
+		$data['conductortbl']=$lista;
 
 		$this->load->view('inc/cabecera');
 		$this->load->view('inc/menu');
@@ -271,7 +271,7 @@ class Usuarios extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO 
 	{
 
 		$lista=$this->estudiante_model->listaestudiantesdeslte();
-		$data['estudiantes']=$lista;
+		$data['conductortbl']=$lista;
 
 		$this->load->view('inclte/cabecera');
 		$this->load->view('inclte/menusuperior');
@@ -287,7 +287,7 @@ class Usuarios extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO 
 	{
 		
 		$lista=$this->estudiante_model->listaestudiantes();
-		$data['estudiantes']=$lista;
+		$data['conductor']=$lista;
 
 		$this->load->view('inc/cabecera');
 		$this->load->view('inc/menu');
@@ -306,7 +306,7 @@ class Usuarios extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO 
 
 	public function pruebabd()
 	{
-		$query=$this->db->get('estudiantes');
+		$query=$this->db->get('conductor');
 		$execonsulta=$query->result();
 		print_r($execonsulta);
 	}
