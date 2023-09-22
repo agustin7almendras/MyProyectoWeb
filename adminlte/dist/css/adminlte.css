@@ -64,9 +64,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #0f100e;/*SE CAMBIO EL COLOR DE LETRA DE LA TABLAS DE LSISTAS*/
   text-align: left;
-  background-color: rgb(245, 99, 9);
+ background-color: rgb(23, 10, 203);/*con este bodyy no funciona*/
 }
 /*-----------------------*/
 [tabindex="-1"]:focus:not(:focus-visible) {
