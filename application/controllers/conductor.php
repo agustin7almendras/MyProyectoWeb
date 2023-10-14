@@ -233,7 +233,9 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		$data['nombre']=$_POST['nombre'];
 		$data['primerApellido']=$_POST['apellido1'];
 		$data['segundoApellido']=$_POST['apellido2'];
+		$data['telefono']=$_POST['telefono'];
 		$data['numLicencia']=$_POST['numLicencia'];
+		
 
 		$this->conductor_model->agregarconductor($data);
 

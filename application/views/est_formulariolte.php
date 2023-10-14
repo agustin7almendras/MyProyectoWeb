@@ -49,13 +49,14 @@
                     <input type="text" class="form-control" name="apellido2" placeholder="Escriba el segundo apellido">
                   </div>
                   <div class="form-group">
+                    <label for="">Numero de telefono</label>
+                    <input type="pastext" class="form-control" name="telefono" placeholder="Escriba su numero de telefo">
+                  </div>  
+                  <div class="form-group">
                     <label for="">Numero de Licencia</label>
                     <input type="pastext" class="form-control" name="numLicencia" placeholder="Escriba numero de licencia">
                   </div>                  
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  </div>
+                 
                 </div>
                 <!-- /.card-body -->
 

@@ -55,6 +55,10 @@
                     <input type="text" name="apellido2" placeholder="Escriba el segundo apellido" class="form-control" value="<?php echo $row->segundoApellido; ?>">
                   </div>
                   <div class="form-group">
+                    <label>telefono </label>
+                    <input type="text" name="telefono" placeholder="Escriba numero de telefono " class="form-control" value="<?php echo $row->telefono; ?>">
+                  </div> 
+                  <div class="form-group">
                     <label>Numero de licencia </label>
                     <input type="text" name="numLicencia" placeholder="Escriba numero de licencia " class="form-control" value="<?php echo $row->numLicencia; ?>">
                   </div>                  

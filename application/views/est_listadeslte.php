@@ -38,6 +38,7 @@
                     <th>Nombre</th>
                     <th>Apellido P.</th>
                     <th>Apellido M.</th>
+                    <th>telfono</th>
                     <th>PLACA</th>
                     <th>Habilitar</th>
                   </tr>
@@ -55,6 +56,7 @@
 						<td><?php echo $row->nombre; ?></td>
 						<td><?php echo $row->primerApellido; ?></td>
 						<td><?php echo $row->segundoApellido; ?></td>
+            <td><?php echo $row->telefono; ?></td>
 						<td><?php echo $row->numLicencia; ?></td>
 
                     <td>

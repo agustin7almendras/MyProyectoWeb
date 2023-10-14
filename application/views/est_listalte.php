@@ -65,6 +65,7 @@
                     <th>Nombre</th>
                     <th>Apellido P.</th> 
                     <th>Apellido M.</th>
+                    <th>telefono</th>
                     <th>LICENCIA</th>
                     <th>Creación</th>
                    <th>Modificar</th>
@@ -85,6 +86,7 @@
 							      <td><?php echo $row->nombre; ?></td> 
 							      <td><?php echo $row->primerApellido; ?></td>
 							      <td><?php echo $row->segundoApellido; ?></td>
+                    <td><?php echo $row->telefono; ?></td>
 							      <td><?php echo $row->numLicencia; ?></td>
                     <td><?php echo formatearFecha($row->creado); ?></td>
                     <td> <?php 
@@ -175,6 +177,7 @@
                     <th>Nombre</th>
                     <th>Apellido P.</th> 
                     <th>Apellido M.</th>
+                    <th>telefono</th>
                     <th>LICENCIA</th>
                     <th>Creación</th>
                     <th>Modificar</th>
