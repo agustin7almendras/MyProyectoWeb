@@ -55,7 +55,7 @@
 						<td><?php echo $row->nombre; ?></td>
 						<td><?php echo $row->primerApellido; ?></td>
 						<td><?php echo $row->segundoApellido; ?></td>
-						<td><?php echo $row->nota; ?></td>
+						<td><?php echo $row->numLicencia; ?></td>
 
                     <td>
 								        <?php 
@@ -63,7 +63,7 @@
 								        	echo form_open_multipart('conductor/habilitarbdlte');// hibilita y se actializa ahi nomas
 								        ?>
 								        	<!-- ocultamos el id en type -- hidden -->
-								        	<input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">
+								        	<input type="hidden" name="idconductor" value="<?php echo $row->idConductor; ?>">
 								        	<button type="submit" class="btn btn-warning">HABILITAR</button>
 
 								        <?php 

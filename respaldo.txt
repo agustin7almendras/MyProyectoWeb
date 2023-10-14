@@ -1,3 +1,134 @@
+///////////////////////////////////////////////////////////////////////////////////////////
+conductor_model.php
+
+
+<?php 
+// este modelo interactua directamente con base de datos 
+   class conductor_model extends CI_Model
+    {
+        public function listaprincipal()//MUESTRA TODOS LA LISTA PRINCIPAL
+        {
+            $this->db->select('*');
+            $this->db->from('conductortbl');// estudiantes la tabla 
+            $this->db->where('habilitado','1');
+            return $this->db->get();
+        }
+
+        
+        public function listaestudianteslte()
+        {
+            $this->db->select('*');
+            $this->db->from('conductortbl');
+            $this->db->where('habilitado','1');
+            return $this->db->get();
+        }
+
+        public function listaestudiantesdeslte()
+        {
+            $this->db->select('*');
+            $this->db->from('conductortbl');
+            $this->db->where('habilitado','0');
+            return $this->db->get();
+        }
+
+        public function agregarestudiantelte($data)
+        {
+            //insercion mvc
+            $this->db->insert('conductortbl',$data);
+
+        }
+
+        public function eliminarestudiantelte($idestudiante)
+        {
+            //borrado mvc hard delete
+            $this->db->where('idEstudiante',$idestudiante);
+            $this->db->delete('conductortbl');
+        }
+
+        public function recuperarestudiantelte($idestudiante)
+        {
+            $this->db->select('*');
+            $this->db->from('conductortbl');
+            $this->db->where('idEstudiante',$idestudiante);
+            return $this->db->get();
+        }
+
+        public function modificarestudiantelte($idestudiante,$data)
+        {
+            $this->db->where('idEstudiante',$idestudiante);
+            $this->db->update('conductortbl',$data);
+        }
+
+    }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+conductor.php 
+
+
+<?php 
+// este modelo interactua directamente con base de datos 
+   class conductor_model extends CI_Model
+    {
+        public function listaprincipal()//MUESTRA TODOS LA LISTA PRINCIPAL
+        {
+            $this->db->select('*');
+            $this->db->from('conductortbl');// estudiantes la tabla 
+            $this->db->where('habilitado','1');
+            return $this->db->get();
+        }
+
+        
+        public function listaestudianteslte()
+        {
+            $this->db->select('*');
+            $this->db->from('conductortbl');
+            $this->db->where('habilitado','1');
+            return $this->db->get();
+        }
+
+        public function listaestudiantesdeslte()
+        {
+            $this->db->select('*');
+            $this->db->from('conductortbl');
+            $this->db->where('habilitado','0');
+            return $this->db->get();
+        }
+
+        public function agregarestudiantelte($data)
+        {
+            //insercion mvc
+            $this->db->insert('conductortbl',$data);
+
+        }
+
+        public function eliminarestudiantelte($idestudiante)
+        {
+            //borrado mvc hard delete
+            $this->db->where('idEstudiante',$idestudiante);
+            $this->db->delete('conductortbl');
+        }
+
+        public function recuperarestudiantelte($idestudiante)
+        {
+            $this->db->select('*');
+            $this->db->from('conductortbl');
+            $this->db->where('idEstudiante',$idestudiante);
+            return $this->db->get();
+        }
+
+        public function modificarestudiantelte($idestudiante,$data)
+        {
+            $this->db->where('idEstudiante',$idestudiante);
+            $this->db->update('conductortbl',$data);
+        }
+
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+est_listalte.php
+
+
+
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -5,7 +136,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1> LISTS DE  DE CONDUCTORES</h1>
+            <h1> LISTA DE  DE CONDUCTORES</h1>
           </div>
           <div class="col-sm-6">
                  <ol class="breadcrumb float-sm-right">
@@ -85,14 +216,14 @@
 							      <td><?php echo $row->nombre; ?></td> 
 							      <td><?php echo $row->primerApellido; ?></td>
 							      <td><?php echo $row->segundoApellido; ?></td>
-							      <td><?php echo $row->numLicencia; ?></td>
+							      <td><?php echo $row->nota; ?></td>
                     <td><?php echo formatearFecha($row->creado); ?></td>
                     <td> <?php 
 							 	        
 								        echo form_open_multipart('conductor/modificarlte');
 								        ?>
 								        	
-								        	<input type="hidden" name="idconductor" value="<?php echo $row->idConductor; ?>">
+								        	<input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">
 								        	<button type="submit" class="btn btn-success">MODIFICAR</button>
 
 								        <?php 
@@ -106,7 +237,7 @@
 								        echo form_open_multipart('conductor/eliminarbdlte');
 								        ?>
 								        	<!-- ocultamos el id en type -- hidden -->
-								        	<input type="hidden" name="idconductor" value="<?php echo $row->idConductor; ?>">
+								        	<input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">
 								        	<button type="submit" class="btn btn-danger">Eliminar</button>
 
 								        <?php 
@@ -122,7 +253,7 @@
 								        	echo form_open_multipart('conductor/deshabilitarbdlte');
 								        ?>
 								        	<!-- ocultamos el id en type -- hidden -->
-								        <input type="hidden" name="idconductor" value="<?php echo $row->idConductor; ?>">
+								        <input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">
 								        	<button type="submit" class="btn btn-warning">DESHABILITAR</button>
 
 								        <?php 
@@ -154,7 +285,7 @@
 								        	echo form_open_multipart('conductor/subirfoto');
 								        ?>
 								        
-								        	<input type="hidden" name="idconductor" value="<?php echo $row->idConductor; ?>">
+								        	<input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">
 								        	<button type="submit" class="btn btn-primary">Subir</button>
 
 								        <?php 
@@ -216,3 +347,5 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
+idconductor

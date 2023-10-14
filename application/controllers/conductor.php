@@ -143,7 +143,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		{
 			//redirect('estudiante/indexlte','refresh');
 			
-			$data['idEstudiante']=$_POST['idestudiante'];
+			$data['idConductor']=$_POST['idconductor'];
 
 			$this->load->view('inclte/cabecera');
 			$this->load->view('inclte/menusuperior');
@@ -163,8 +163,8 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		{
 			//redirect('conductor/indexlte','refresh');
 			
-			$idestudiante=$_POST['idEstudiante'];
-			$nombrearchivo=$idestudiante.".jpg";
+			$idconductor=$_POST['idConductor'];
+			$nombrearchivo=$idconductor.".jpg";
 			
 			$config['upload_path']='./uploads/fotosconductores/';
 			$config['file_name']=$nombrearchivo;
@@ -185,7 +185,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 			else
 			{
 				$data['foto']=$nombrearchivo;
-				$this->conductor_model->modificarestudiante($idestudiante,$data);
+				$this->conductor_model->modificarestudiante($idconductor,$data);
 				$this->upload->data();
 			}
 			redirect('conductor/indexlte','refresh');
@@ -233,7 +233,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		$data['nombre']=$_POST['nombre'];
 		$data['primerApellido']=$_POST['apellido1'];
 		$data['segundoApellido']=$_POST['apellido2'];
-		$data['nota']=$_POST['nota'];
+		$data['numLicencia']=$_POST['numLicencia'];
 
 		$this->conductor_model->agregarestudiantelte($data);
 
@@ -243,16 +243,16 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 	public function eliminarbdlte()
 	{
 		//
-		$idestudiante=$_POST['idestudiante'];
-		$this->conductor_model->eliminarestudiantelte($idestudiante);
+		$idconductor=$_POST['idconductor'];
+		$this->conductor_model->eliminarestudiantelte($idconductor);
 		redirect('conductor/indexlte','refresh');
 	}
 
 	public function modificarlte()
 	{
 		//recepcion que esta llegando desde el boton modificar
-		$idestudiante=$_POST['idestudiante'];
-		$data['infoestudiante']=$this->conductor_model->recuperarestudiantelte($idestudiante);
+		$idconductor=$_POST['idconductor'];
+		$data['infoestudiante']=$this->conductor_model->recuperarestudiantelte($idconductor);
 
 		$this->load->view('inclte/cabecera');
 		$this->load->view('inclte/menusuperior');
@@ -263,32 +263,32 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 	}
 	public function modificarbdlte()
 	{
-		$idestudiante=$_POST['idestudiante'];
+		$idconductor=$_POST['idconductor'];
 
 		$data['nombre']=$_POST['nombre'];
 		$data['primerApellido']=$_POST['apellido1'];
 		$data['segundoApellido']=$_POST['apellido2'];
-		$data['nota']=$_POST['nota'];
+		$data['numlicencia']=$_POST['numlicencia'];
 
-		$this->conductor_model->modificarestudiantelte($idestudiante,$data);
+		$this->conductor_model->modificarestudiantelte($idconductor,$data);
 		redirect('conductor/indexlte','refresh');
 	}
 	public function deshabilitarbdlte()
 	{
-		$idestudiante=$_POST['idestudiante'];
+		$idconductor=$_POST['idconductor'];
 		$data['habilitado']='0';
 
-		$this->conductor_model->modificarestudiantelte($idestudiante,$data);
+		$this->conductor_model->modificarestudiantelte($idconductor,$data);
 		redirect('conductor/indexlte','refresh');
 	}
 
 	
 	public function habilitarbdlte()
 	{
-		$idestudiante=$_POST['idestudiante'];
+		$idconductor=$_POST['idconductor'];
 		$data['habilitado']='1';
 
-		$this->conductor_model->modificarestudiantelte($idestudiante,$data);
+		$this->conductor_model->modificarestudiantelte($idconductor,$data);
 		redirect('conductor/deshabilitadoslte','refresh');
 	}
 

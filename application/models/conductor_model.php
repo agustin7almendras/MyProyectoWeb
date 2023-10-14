@@ -34,24 +34,24 @@
 
         }
 
-        public function eliminarestudiantelte($idestudiante)
+        public function eliminarestudiantelte($idconductor)
         {
             //borrado mvc hard delete
-            $this->db->where('idEstudiante',$idestudiante);
+            $this->db->where('idConductor',$idconductor);
             $this->db->delete('conductortbl');
         }
 
-        public function recuperarestudiantelte($idestudiante)
+        public function recuperarestudiantelte($idconductor)
         {
             $this->db->select('*');
             $this->db->from('conductortbl');
-            $this->db->where('idEstudiante',$idestudiante);
+            $this->db->where('idConductor',$idconductor);
             return $this->db->get();
         }
 
-        public function modificarestudiantelte($idestudiante,$data)
+        public function modificarestudiantelte($idconductor,$data)
         {
-            $this->db->where('idEstudiante',$idestudiante);
+            $this->db->where('idConductor',$idconductor);
             $this->db->update('conductortbl',$data);
         }
 

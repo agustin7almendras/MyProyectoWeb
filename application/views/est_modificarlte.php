@@ -42,7 +42,7 @@
                 <div class="card-body">
 					
                   <div class="form-group">
-				  <input type="hidden" name="idestudiante" class="form-control" value="<?php echo $row->idEstudiante; ?>">
+				  <input type="hidden" name="idconductor" class="form-control" value="<?php echo $row->idConductor; ?>">
                     <label for="">Nombre</label>					
                     <input type="text" name="nombre" placeholder="Escriba el nombre" class="form-control" value="<?php echo $row->nombre; ?>">
                   </div>
@@ -55,8 +55,8 @@
                     <input type="text" name="apellido2" placeholder="Escriba el segundo apellido" class="form-control" value="<?php echo $row->segundoApellido; ?>">
                   </div>
                   <div class="form-group">
-                    <label>Nota</label>
-                    <input type="text" name="nota" placeholder="Escriba la nota" class="form-control" value="<?php echo $row->nota; ?>">
+                    <label>Numero de licencia </label>
+                    <input type="text" name="numLicencia" placeholder="Escriba numero de licencia " class="form-control" value="<?php echo $row->numLicencia; ?>">
                   </div>                  
                   
                 </div>

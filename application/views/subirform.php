@@ -37,7 +37,7 @@
 			?>
                 <div class="card-body">
                   
-                  <input type="hidden" name="idEstudiante" value="<?php echo $idEstudiante; ?>">
+                  <input type="hidden" name="idConductor" value="<?php echo $idConductor; ?>">
                   <input type="file" name="userfile" class="form-control">
 
                 </div>
