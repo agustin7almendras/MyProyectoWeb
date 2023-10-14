@@ -13113,9 +13113,9 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
         margin-left: 4.6rem
     }
 }
-
+/*CONTENIDO DETRAS DE LA TABLA /////////////////////////////////////////////////////////////////7*/
 .content-wrapper {
-    background-color: #f4f6f9
+    background-color: #2a6fd6
 }
 
 .content-wrapper>.content {
@@ -30513,9 +30513,9 @@ html.maximized-card {
     clear: both;
     content: ""
 }
-
+/*.card-header     COLOR DE TECONTENIDO DE LA TABLA ///////////////////////////////////////////////////////////////*/
 .card-header {
-    background-color: transparent;
+    background-color:#255df7;
     border-bottom: 1px solid rgba(0, 0, 0, .125);
     padding: .75rem 1.25rem;
     position: relative;
