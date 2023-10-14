@@ -235,7 +235,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		$data['segundoApellido']=$_POST['apellido2'];
 		$data['numLicencia']=$_POST['numLicencia'];
 
-		$this->conductor_model->agregarestudiantelte($data);
+		$this->conductor_model->agregarconductor($data);
 
 		redirect('conductor/indexlte','refresh');
 	}
@@ -268,7 +268,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		$data['nombre']=$_POST['nombre'];
 		$data['primerApellido']=$_POST['apellido1'];
 		$data['segundoApellido']=$_POST['apellido2'];
-		$data['numlicencia']=$_POST['numlicencia'];
+		$data['numLicencia']=$_POST['numLicencia'];
 
 		$this->conductor_model->modificarestudiantelte($idconductor,$data);
 		redirect('conductor/indexlte','refresh');

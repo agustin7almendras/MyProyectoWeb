@@ -27,7 +27,7 @@
             return $this->db->get();
         }
 
-        public function agregarestudiantelte($data)
+        public function agregarconductor($data)
         {
             //insercion mvc
             $this->db->insert('conductortbl',$data);
