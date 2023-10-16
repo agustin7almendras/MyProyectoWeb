@@ -184,7 +184,7 @@
           <li class="nav-header">EXAMPLES</li>
           <li class="nav-item">
             <a href="../calendar.html" class="nav-link">
-              <!--<i class="nav-icon far fa-calendar-alt"></i>-->
+              <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Calendario
                 <span class="badge badge-info right">2</span>
@@ -272,14 +272,12 @@
       </nav>
       <!-- /.sidebar-menu -->
     </div>
-    <a href="<?php echo base_url(); ?>index.php/usuarios/logout">
+                <a href="<?php echo base_url(); ?>index.php/usuarios/logout">
                 <button type="button" class="btn btn-danger" >Cerrar cesion</button>
                 </a>
 
 
-                <button class="btn">
-                <i class="far fa-calendar-alt"></i> Calendario
-                </button>
-
+                
+ 
     <!-- /.sidebar -->
   </aside>

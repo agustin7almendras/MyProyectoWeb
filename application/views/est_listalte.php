@@ -12,9 +12,7 @@
                    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
             <!--  <li class="breadcrumb-item active">DataTables</li>-->
                  </ol>
-                 <a href="<?php echo base_url(); ?>index.php/usuarios/logout">
-                  <button type="button" class="btn btn-danger">Cerrar cesion</button>
-                 </a>
+                
 
           </div>
            
@@ -123,7 +121,7 @@
                       echo form_open_multipart('conductor/deshabilitarbdlte');
                     ?>
                        <input type="hidden" name="idconductor" value="<?php echo $row->idConductor; ?>">
-                       <button type="submit" class="btn btn-warning">Ds
+                       <button type="submit" class="btn btn-warning">
                            <i class="far fa-times"></i> 
                        </button>
                            <?php

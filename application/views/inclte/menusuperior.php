@@ -16,6 +16,11 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
+           <a href="<?php echo base_url(); ?>index.php/usuarios/logout">
+              <button type="button" class="btn btn-danger">
+              <i class="fas fa-sign-out-alt"></i> Cerrar sessión
+              </button>
+           </a>
       <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
           <i class="fas fa-search"></i>
