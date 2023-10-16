@@ -68,8 +68,8 @@
                     <th>telefono</th>
                     <th>LICENCIA</th>
                     <th>Creación</th>
-                   <th>Modificar</th>
-                    <th>Eliminar</th>
+                   <th></th>
+                    <th></th>
                    <th>Deshabilitar</th>
                    <!-- <th>Foto</th>-->
                   </tr>
@@ -89,47 +89,46 @@
                     <td><?php echo $row->telefono; ?></td>
 							      <td><?php echo $row->numLicencia; ?></td>
                     <td><?php echo formatearFecha($row->creado); ?></td>
-                    <td> <?php 
-							 	        
-								        echo form_open_multipart('conductor/modificarlte');
-								        ?>
-								        	
-								        	<input type="hidden" name="idconductor" value="<?php echo $row->idConductor; ?>">
-								        	<button type="submit" class="btn btn-success">MODIFICAR</button>
-
-								        <?php 
-								        echo form_close();
-								        ?>
-							      </td>
-                  <!--...................................................................................................-->
+                    <!--botn modificar-->
                     <td>
-								        <?php 
-								        //envia datos hasta agregarbd
-								        echo form_open_multipart('conductor/eliminarbdlte');
-								        ?>
-								        	<!-- ocultamos el id en type -- hidden -->
-								        	<input type="hidden" name="idconductor" value="<?php echo $row->idConductor; ?>">
-								        	<button type="submit" class="btn btn-danger">Eliminar</button>
-
-								        <?php 
-								        echo form_close();
-								        ?>
+                      <?php
+                         echo form_open_multipart('conductor/modificarlte');
+                           ?>
+                       <input type="hidden" name="idconductor" value="<?php echo $row->idConductor; ?>">
+                       <button type="submit" class="btn btn-success">
+                                  <i class="far fa-edit"></i>
+                        </button>
+                      <?php
+                      echo form_close();
+                      ?>
+							      </td>
+                  <!--............................BOTON ELIMINAR ............................-->
+                    <td>
+                         <?php
+                              echo form_open_multipart('conductor/eliminarbdlte');
+                           ?>
+                          <input type="hidden" name="idconductor" value="<?php echo $row->idConductor; ?>">
+                          <button type="submit" class="btn btn-danger">
+                               <i class="far fa-trash-alt"></i>
+                         </button>
+                                   <?php
+                                    echo form_close();
+                                   ?>
 
 							      </td>
                     <!--BOTON DESHABILTAR-->
                     
                     <td>
-								        <?php 
-								        	//envia datos hasta agregarbd
-								        	echo form_open_multipart('conductor/deshabilitarbdlte');
-								        ?>
-								        	<!-- ocultamos el id en type -- hidden -->
-								        <input type="hidden" name="idconductor" value="<?php echo $row->idConductor; ?>">
-								        	<button type="submit" class="btn btn-warning">DESHABILITAR</button>
-
-								        <?php 
-								        echo form_close();
-								        ?>
+                    <?php
+                      echo form_open_multipart('conductor/deshabilitarbdlte');
+                    ?>
+                       <input type="hidden" name="idconductor" value="<?php echo $row->idConductor; ?>">
+                       <button type="submit" class="btn btn-warning">Ds
+                           <i class="far fa-times"></i> 
+                       </button>
+                           <?php
+                       echo form_close();
+                       ?>
 							      </td>
                     
 
@@ -180,8 +179,8 @@
                     <th>telefono</th>
                     <th>LICENCIA</th>
                     <th>Creación</th>
-                    <th>Modificar</th>
-                    <th>Eliminar</th>
+                    <th></th>
+                    <th></th>
                    <th>Deshabilitar</th>
                    <!-- <th>Foto</th>-->
                   </tr>                  
