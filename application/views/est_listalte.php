@@ -102,17 +102,12 @@
 							      </td>
                   <!--............................BOTON ELIMINAR ............................-->
                     <td>
-                         <?php
-                              echo form_open_multipart('conductor/eliminarbdlte');
-                           ?>
-                          <input type="hidden" name="idconductor" value="<?php echo $row->idConductor; ?>">
-                          <button type="submit" class="btn btn-danger">
-                               <i class="far fa-trash-alt"></i>
+                    <?php echo form_open_multipart('conductor/eliminarbdlte'); ?>
+                    <input type="hidden" name="idconductor" value="<?php echo $row->idConductor; ?>">
+                   <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?');">
+                    <i class="far fa-trash-alt"></i> 
                          </button>
-                                   <?php
-                                    echo form_close();
-                                   ?>
-
+                            <?php echo form_close(); ?>
 							      </td>
                     <!--BOTON DESHABILTAR-->
                     
