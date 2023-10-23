@@ -1,35 +1,26 @@
 <?php
-class Vehiculo_model extends CI_Model
-{
-    public function listar()
-    {
-        $this->db->select('*');
-        $this->db->from('vehiculo');
-        return $this->db->get();
+class Vehiculo_model extends CI_Model {
+    public function listarVehiculos() {
+        return $this->db->get('vehiculo')->result();
     }
 
-    public function agregar($data)
-    {
+    public function agregarVehiculo($data) {
         $this->db->insert('vehiculo', $data);
+        return $this->db->insert_id();
     }
 
-    public function obtenerPorId($idVehiculo)
-    {
-        $this->db->select('*');
-        $this->db->from('vehiculo');
-        $this->db->where('idVehiculo', $idVehiculo);
-        return $this->db->get()->row();
+    public function obtenerVehiculoPorID($id) {
+        return $this->db->get_where('vehiculo', array('idVehiculo' => $id))->row();
     }
 
-    public function editar($idVehiculo, $data)
-    {
-        $this->db->where('idVehiculo', $idVehiculo);
+    public function actualizarVehiculo($id, $data) {
+        $this->db->where('idVehiculo', $id);
         $this->db->update('vehiculo', $data);
     }
 
-    public function eliminar($idVehiculo)
-    {
-        $this->db->where('idVehiculo', $idVehiculo);
+    public function eliminarVehiculo($id) {
+        $this->db->where('idVehiculo', $id);
         $this->db->delete('vehiculo');
     }
 }
+?>
