@@ -33,7 +33,7 @@
               <div class="card-header">                
 
     
-                <h1>PRIMER USUARIO ADMINISTRADOR</h1>
+                <h1>USUARIO ADMINISTRADOR</h1>
               <br>
              <!-- PARA QUE CARGUE EL NOMBRE DEL USUARIO-->
               <h3>
