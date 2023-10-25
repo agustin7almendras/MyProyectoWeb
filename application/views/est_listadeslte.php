@@ -48,7 +48,7 @@
 
             <?php 
 				    $indice=1;
-				    foreach ($conductortbl->result() as $row) // tabla condutortbl
+				    foreach ($conductor->result() as $row) // tabla condutortbl
 				    {
 					  ?>
                   <tr>

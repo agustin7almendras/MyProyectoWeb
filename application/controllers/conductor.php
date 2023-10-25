@@ -299,7 +299,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 	{
 
 		$lista=$this->conductor_model->listaestudiantesdeslte();
-		$data['conductortbl']=$lista;
+		$data['conductor']=$lista;// tabla conductor
 
 		$this->load->view('inclte/cabecera');
 		$this->load->view('inclte/menusuperior');
