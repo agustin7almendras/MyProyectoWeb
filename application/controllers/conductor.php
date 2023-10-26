@@ -273,7 +273,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		$data['telefono']=$_POST['telefono'];
 		$data['numLicencia']=$_POST['numLicencia'];
 
-		$this->conductor_model->modificarestudiantelte($idconductor,$data);
+		$this->conductor_model->modificarconductor($idconductor,$data);
 		redirect('conductor/indexlte','refresh');
 	}
 	public function deshabilitarbdlte()
@@ -281,7 +281,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		$idconductor=$_POST['idconductor'];
 		$data['habilitado']='0';
 
-		$this->conductor_model->modificarestudiantelte($idconductor,$data);
+		$this->conductor_model->modificarconductor($idconductor,$data);
 		redirect('conductor/indexlte','refresh');
 	}
 
@@ -291,7 +291,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 		$idconductor=$_POST['idconductor'];
 		$data['habilitado']='1';
 
-		$this->conductor_model->modificarestudiantelte($idconductor,$data);
+		$this->conductor_model->modificarconductor($idconductor,$data);
 		redirect('conductor/deshabilitadoslte','refresh');
 	}
 

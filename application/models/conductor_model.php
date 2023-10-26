@@ -49,7 +49,7 @@
             return $this->db->get();
         }
 
-        public function modificarestudiantelte($idconductor,$data)
+        public function modificarconductor($idconductor,$data)
         {
             $this->db->where('idConductor',$idconductor);
             $this->db->update('conductor',$data);
