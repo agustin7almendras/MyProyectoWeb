@@ -11,7 +11,7 @@
         }
 
         
-        public function listaestudianteslte()
+        public function listaConductores()// metodo consulta que muestra todo
         {
             $this->db->select('*');
             $this->db->from('conductor');
@@ -19,7 +19,7 @@
             return $this->db->get();
         }
 
-        public function listaestudiantesdeslte()
+        public function listaConductoresDeshabilitados()
         {
             $this->db->select('*');
             $this->db->from('conductor');

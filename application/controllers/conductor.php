@@ -298,7 +298,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 	public function deshabilitadoslte()//METODO QUE CARGA deshabilitadoslte
 	{
 
-		$lista=$this->conductor_model->listaestudiantesdeslte();
+		$lista=$this->conductor_model->listaConductoresDeshabilitados();
 		$data['conductor']=$lista;// tabla conductor
 
 		$this->load->view('inclte/cabecera');
