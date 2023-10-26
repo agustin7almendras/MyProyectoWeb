@@ -68,7 +68,7 @@
                     <th>Creación</th>
                    <th></th>
                     <th></th>
-                   <th>Deshabilitar</th>
+                   <th>Ds</th>
                    <!-- <th>Foto</th>-->
                   </tr>
                   </thead>
@@ -174,7 +174,7 @@
                     <th>Creación</th>
                     <th></th>
                     <th></th>
-                   <th>Deshabilitar</th>
+                   <th>Ds</th>
                    <!-- <th>Foto</th>-->
                   </tr>                  
                   </tfoot>

@@ -246,7 +246,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 	{
 		//
 		$idconductor=$_POST['idconductor'];
-		$this->conductor_model->eliminarestudiantelte($idconductor);
+		$this->conductor_model->eliminarconductor($idconductor);
 		redirect('conductor/indexlte','refresh');
 	}
 
@@ -254,7 +254,7 @@ class Conductor extends CI_Controller { //ESTO ES HERERNCIA, ACCEDEMOS A NUESTRO
 	{
 		//recepcion que esta llegando desde el boton modificar
 		$idconductor=$_POST['idconductor'];
-		$data['infoestudiante']=$this->conductor_model->recuperarestudiantelte($idconductor);
+		$data['infoestudiante']=$this->conductor_model->recuperarconductor($idconductor);
 
 		$this->load->view('inclte/cabecera');
 		$this->load->view('inclte/menusuperior');

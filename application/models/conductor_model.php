@@ -19,7 +19,7 @@
             return $this->db->get();
         }
 
-        public function listaConductoresDeshabilitados()
+        public function listaConductoresDeshabilitados()//consulta deshabilitados
         {
             $this->db->select('*');
             $this->db->from('conductor');
@@ -34,14 +34,14 @@
 
         }
 
-        public function eliminarestudiantelte($idconductor)
+        public function eliminarconductor($idconductor)
         {
             //borrado mvc hard delete
             $this->db->where('idConductor',$idconductor);
             $this->db->delete('conductor');
         }
 
-        public function recuperarestudiantelte($idconductor)
+        public function recuperarconductor($idconductor)
         {
             $this->db->select('*');
             $this->db->from('conductor');
